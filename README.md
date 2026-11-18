@@ -54,6 +54,7 @@ El resto de la configuración de Gradle es igual a la de [AppBase](https://githu
 
 ## Si algo no compila
 
+- **"requires … compile against version 37"**: Vico 3.3.1 necesita `compileSdk = 37` (ya está así en `app/build.gradle.kts`). Si Android Studio dice que falta la plataforma, instálala desde **SDK Manager > Android 37**. `targetSdk` se queda en 36.
 - **Ejemplos de internet con `columnSeries`, `vico.core` o `vico.multiplatform`** son de Vico 1 o 2. En la 3 son `columnModel`, `lineModel` y el módulo `compose`.
 - **Import de `CartesianValueFormatter`**: si Android Studio no lo encuentra en `com.patrykandpatrick.vico.compose.cartesian.data`, bórralo y usa Alt+Enter para que lo sugiera. La API está en la guía: *Cartesian charts > CartesianValueFormatter*.
 - **La gráfica no se ve**: necesita altura (`Modifier.height(240.dp)`).

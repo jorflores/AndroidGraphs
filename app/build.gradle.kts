@@ -8,7 +8,9 @@ plugins {
 
 android {
     namespace = "mx.tec.androidgraphs"
-    compileSdk = 36
+    // Vico 3.3.1 (y Compose 1.12, que trae) piden compilar contra Android 37.
+    // Solo cambia compileSdk; targetSdk y minSdk se quedan igual.
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "mx.tec.androidgraphs"
